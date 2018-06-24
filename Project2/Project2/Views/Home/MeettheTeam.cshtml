@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "MeettheTeam";
+}
+
+<style>
+     /*KAZDAGLIS*/ 
+    #kazda {
+        position: fixed;
+        right: -16%;
+        bottom: 0;
+        width: 186px;
+        height: 255px;
+    }
+     /*KAZDAGLIS*/ 
+
+    .manage-text-aligner {
+        text-align: center;
+    }
+</style>
+
+@Styles.Render("~/Content/MeettheTeam.css")
+<link href="~/Content/LoggedDataStyle.css" rel="stylesheet" />
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' >
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Dancing+Script:700' rel='stylesheet' type='text/css' >
+
+
+<body>
+  
+
+    <!-- 3D Slideshow Section -->
+    <section id="slideshow">
+        <div class="entire-content">
+            <div class="content-carrousel">
+                <figure class="shadow"><img src="https://scontent.fath2-1.fna.fbcdn.net/v/t1.0-9/22228380_10210187055296451_3396884024212134488_n.jpg?_nc_cat=0&oh=10cf18ae1dd23f87ad4ae7d846881377&oe=5BBD0931" /></figure>
+                <figure class="shadow"><img src="https://scontent.fath2-1.fna.fbcdn.net/v/t1.0-9/13151661_1737896296426329_2392882635808536857_n.jpg?_nc_cat=0&oh=c57957ff4d3ec941429e09e48e9a173b&oe=5BC391FD" /></figure>
+                <figure class="shadow"><img src="https://scontent.fath2-1.fna.fbcdn.net/v/t1.0-9/29512792_10213850338245783_759443392661429255_n.jpg?_nc_cat=0&oh=d2526c629f88ca4379d483276c0bc625&oe=5BBE97DE" /></figure>
+                <figure class="shadow"><img src="https://scontent.fath2-1.fna.fbcdn.net/v/t1.0-9/19247718_10212507588181038_2563119777115696286_n.jpg?_nc_cat=0&oh=e7547e3f70642c0716c70969d3c2d881&oe=5B89B0B0" /></figure>
+                <figure class="shadow"><img src="https://scontent.fath2-1.fna.fbcdn.net/v/t1.0-9/25629_442173694464_2571059_n.jpg?_nc_cat=0&oh=1d84ae3b3c1c0c7184f5dbbff3faf448&oe=5B86CC43" /></figure>
+                @*<figure class="shadow" id="kazda" style="opacity:0;"><img src="~/Content/Images/Avatars/Kazdaglis.jpg" /></figure>*@
+                <div id="videotutorials"><figure class="shadow"><img id="kaz" src="https://www.greatdanegraphics.com/content/images/thumbs/0021499_flag-eagle.png" /></figure></div>
+
+            </div>
+
+        </div>
+        <div id="kazda"><img src="~/Content/Images/Avatars/Kazdaglis.jpg" /></div>
+    </section>
+    <section>
+
+        <div class="embiggen">Our Team</div>
+        <div id="first"></div>
+        <div class="row">
+            <div class="containers col-lg-6 col-md-6">
+
+                <div class="pic" id="Anestis"></div>
+
+
+            </div>
+
+
+            <div id="one" class="col-md-4 manage-text-aligner" style="padding-bottom:50px"></div>
+
+        </div>
+        <div id="second"></div>
+        <div class="row">
+            <div class="containers col-lg-6 col-md-6">
+
+                <div class="pic" id="Gerogiannis"></div>
+
+
+            </div>
+            <div id="two" class="col-md-4 manage-text-aligner" style="padding-bottom:50px"></div>
+
+        </div>
+        <div id="third"></div>
+        <div class="row">
+            <div class="containers col-lg-6 col-md-6">
+                <div class="pic" id="Koronaios"></div>
+
+
+
+
+            </div>
+            <div id="three" class="col-md-4 manage-text-aligner" style="padding-bottom:50px"></div>
+        </div>
+
+        <div id="fourth"></div>
+        <div class="row">
+            <div class="containers col-lg-6 col-md-6">
+                <div class="pic" id="Kannelos"></div>
+
+
+            </div>
+            <div id="four" class="col-md-4 manage-text-aligner" style="padding-bottom:50px"></div>
+
+        </div>
+        <div id="fifth"></div>
+        <div class="row">
+            <div class="containers col-lg-6 col-md-6">
+
+                <div class="pic"></div>
+
+
+            </div>
+            <div id="five" class="col-md-4 manage-text-aligner" style="padding-bottom:50px"></div>
+
+
+        </div>
+        
+    </section>
+    <script>
+        $(document).ready(function () {
+            function delay() {
+                function kazda() {
+                    $('#kazda').animate({ right: '45%' }, 1500);
+                }
+                setTimeout(kazda(), 1500);
+                function kazdaUp() {
+                    $('#kazda').animate({ bottom: '20%' }, 200);
+                }
+                setTimeout(kazdaUp(), 200);
+                function kaz() {
+                    $('#kaz').attr("src", "/Content/Images/Avatars/Kazdaglis.jpg")
+                }
+                setTimeout(kaz, 1700);
+                function kazdaDown() {
+                    $('#kazda').animate({ bottom: 0 }, 200);
+                }
+                setTimeout(kazdaDown(), 200);
+                $('#kazda').animate({ right: '100%' }, 400);
+            };
+            setTimeout(delay, 2500);
+            
+        });
+    </script>
+</body>
